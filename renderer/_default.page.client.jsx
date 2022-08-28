@@ -1,19 +1,21 @@
-import React from 'react'
-import { hydrateRoot } from 'react-dom/client'
-import { PageShell } from './PageShell'
+import React from "react";
+import { hydrateRoot } from "react-dom/client";
+import { PageShell } from "./PageShell";
+import "./index.css";
 
-export { render }
+export const clientRouting = true;
+export { render };
 
 async function render(pageContext) {
   // We do Server Routing, but we can also do Client Routing by using `useClientRouter()`
   // instead of `getPage()`, see https://vite-plugin-ssr.com/useClientRouter
-  const { Page, pageProps } = pageContext
+  const { Page, pageProps } = pageContext;
   hydrateRoot(
-    document.getElementById('page-view'),
+    document.getElementById("page-view"),
     <PageShell pageContext={pageContext}>
       <Page {...pageProps} />
     </PageShell>
-  )
+  );
 }
 
 /* To enable Client-side Routing:

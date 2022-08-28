@@ -1,12 +1,12 @@
 import React from "react";
-import { HomePage } from "../../src/pages";
+import { PricePage } from "../../src/pages";
 
 export { Page };
 
 function Page() {
   return (
     <>
-      <HomePage />
+      <PricePage />
     </>
   );
 }

@@ -1,5 +1,8 @@
-/* This CSS is common to all pages */
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=EB+Garamond:wght@400;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
